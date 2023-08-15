@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter sign-up</title>
     <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="src/input.css">
 </head>
 <body class="flex flex-col w-screen h-screen gap-7">
     <!-- image box -->
     <div class="w-full">
-        <img class="rounded-b-2xl" src="assets/images/illustration-sign-up-mobile.svg" alt="">
+        <img class="rounded-b-2xl w-full" src="assets/images/illustration-sign-up-mobile.svg" alt="">
     </div>
     <!-- text box -->
     <div class="flex flex-col ml-5 ">
@@ -23,12 +24,12 @@
             Join 60,000+ product managers receiving monthly updates on:
         </span>
         <!-- list of benefits -->
-        <div class="flex flex-row pr-7 gap-3 mb-2">
+        <div class="flex flex-row pr-7 gap-3">
             <img src="assets/images/icon-list.svg" alt="">
             <span>Product discovery and building what matters</span>
         </div>
 
-        <div class="flex flex-row pr-7 gap-3 mb-5">
+        <div class="flex flex-row pr-7 gap-3 my-5">
             <img src="assets/images/icon-list.svg" alt="">
             <span>Measuring to ensure updates are a success</span>
         </div>
@@ -40,10 +41,15 @@
     </div>
     <!-- sign-up box -->
     <div class="flex flex-col ml-6">
-        <span class="text-sm">Email address</span>
-        <input class="w-[92%] pl-3 border border-gray-400 rounded-md mb-5 h-[50px] mt-3" type="email" placeholder="email@company.com">
-        <button class="hover:bg-gradient-to-tr from-pink-600 to-orange-600
+        <div class="flex justify-between w-[92%]">
+            <span class="text-sm font-bold">Email address</span>
+            <span id="email-invalid-text" class="hidden font-bold text-sm text-orange-500">Valid email required</span>
+        </div>
+        <input id="input" class=" w-[92%] pl-3 border border-gray-400 rounded-md mb-5 h-[50px] mt-3" type="email" placeholder="email@company.com">
+
+        <button id="signup-button" class="hover:bg-gradient-to-tr from-pink-600 to-orange-600
         transition-all duration-200 text-sm font-bold w-[92%] h-[50px] bg-black text-white rounded-md">Subscribe to monthly newsletter</button>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

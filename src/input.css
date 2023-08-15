@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .error{
+        @apply border-orange-400 text-red-400 bg-orange-100;
+    }
+}
