@@ -9,9 +9,9 @@ const already = document.getElementById('already-done');
 let validEmail;
 
 button.addEventListener('click' , () =>{
-    let span = '';
     let email = String(input.value);
     email = email.split('');
+    
     
     if(!validateEmail(email)){
         success.classList.add('hidden');
@@ -22,7 +22,12 @@ button.addEventListener('click' , () =>{
         input.style.color ="rgb(194 65 12)";
         input.style.borderColor = "rgb(251 146 60)";
     } else if(validateEmail(email) && validEmail !== input.value) {
-        span =  document.createElement('span');
+        if (successText.hasChildNodes()){ 
+            console.log(successText.hasChildNodes());
+            let child = successText.lastElementChild;
+            successText.removeChild(child);
+        }
+        const span =  document.createElement('span');
         span.textContent = `A confirmation email has been sent to ${input.value}. 
         Please open it and click the button inside to confirm your subscription.`
         successText.appendChild(span);
@@ -47,7 +52,6 @@ button.addEventListener('click' , () =>{
 
 dismiss.addEventListener('click' , () =>{
     successScreen.classList.add('translate-y-full');
-    span.remove();
 });
 
 
