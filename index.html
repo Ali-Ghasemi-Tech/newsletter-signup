@@ -44,12 +44,33 @@
         <div class="flex justify-between w-[92%]">
             <span class="text-sm font-bold">Email address</span>
             <span id="email-invalid-text" class="hidden font-bold text-sm text-orange-500">Valid email required</span>
+            <span id="success" class="hidden text-green-500 text-sm font-bold">success</span>
         </div>
-        <input id="input" class=" w-[92%] pl-3 border border-gray-400 rounded-md mb-5 h-[50px] mt-3" type="email" placeholder="email@company.com">
+        <input id="input" class=" w-[92%] pl-3 border border-gray-400 rounded-md mb-5 h-[50px] mt-3"  type="email" placeholder="email@company.com">
 
         <button id="signup-button" class="hover:bg-gradient-to-tr from-pink-600 to-orange-600
         transition-all duration-200 text-sm font-bold w-[92%] h-[50px] bg-black text-white rounded-md">Subscribe to monthly newsletter</button>
     </div>
+    <!-- success popup screen -->
+    <div id="success-popup" class="flex flex-col items-center justify-between fixed inset-0 bg-white translate-y-full transition-all duration-700" >
+        <div class="flex flex-col gap-6 items-center justify-center pt-32 w-[95%]">
+            <div class="w-[90%]">
+                <img src="./assets/images/icon-success.svg" alt="">
+            </div>
+            <div class="w-[90%]">
+                <span class="text-5xl font-bold ">Thanks for subscribing!</span>
+            </div>
+            <div id="success-text" class="w-[90%]">
+               
+            </div>
+        </div>
+        <!-- success icon -->
+        
+        <button id="dismiss-button" class=" h-12 bg-indigo-950 rounded-lg hover:bg-indigo-800 text-gray-100 w-[90%]">
+            Dismiss message
+        </button>
+    </div>
+    
     <script src="index.js"></script>
 </body>
 </html>
