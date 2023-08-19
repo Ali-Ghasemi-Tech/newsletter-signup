@@ -29,13 +29,14 @@
 
 }
 
-@media screen and (min-width: 1024px) and (max-width :1870px)  {  
+@media screen and (min-width: 1024px) and (max-width :1440px)  {  
     #wraper{
         height: 60%;
         width: 60%;
     }
     #input ,
-    #signup-button{
+    #signup-button,
+    #dismiss-button{
         height: 50px;
     }
 
@@ -52,13 +53,14 @@
 
 }
 
-@media screen and (min-width: 1870px)  {  
+@media screen and (min-width: 1440px)  {  
     #wraper{
         height: 60%;
         width: 50%;
     }
     #input ,
-    #signup-button{
+    #signup-button,
+    #dismiss-button{
         height: 50px;
     }
 
