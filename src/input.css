@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+    --ratio: 0.6;
+
+    --font1-sizeVW: 15vh;
+    --font1-sizeVH: calc(var(--ratio) * 6vw);
+
+    
+    --font2-sizeVW: 8vh;
+    --font2-sizeVH: calc(var(--ratio) * 2vw);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {  
+    #wraper{
+        height: 55%;
+        width: 70%;
+    }
+    #title {  
+        font-size: var(--font1-sizeVH); 
+    } 
+
+    .text {  
+        font-size: var(--font2-sizeVH);
+    } 
+
+}
+
+@media screen and (min-width: 1024px) and (max-width :1870px)  {  
+    #wraper{
+        height: 60%;
+        width: 60%;
+    }
+    #input ,
+    #signup-button{
+        height: 50px;
+    }
+
+    #text-box{
+        margin-left: 5%;
+    }
+    #title {  
+        font-size: calc(var(--ratio) * 4vw);; 
+    } 
+
+    .text {  
+        font-size: calc(var(--ratio) * 1.5vw);;
+    } 
+
+}
+
+@media screen and (min-width: 1870px)  {  
+    #wraper{
+        height: 60%;
+        width: 50%;
+    }
+    #input ,
+    #signup-button{
+        height: 50px;
+    }
+
+    #text-box{
+        margin-left: 5%;
+    }
+    #title {  
+        font-size: calc(var(--ratio) * 3.5vw);; 
+    } 
+
+    .text {  
+        font-size: calc(var(--ratio) * 1.3vw);;
+    } 
+
+}

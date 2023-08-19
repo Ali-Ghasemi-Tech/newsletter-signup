@@ -8,50 +8,59 @@
     <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="src/input.css">
 </head>
-<body class="flex flex-col w-screen h-screen gap-7">
-    <!-- image box -->
-    <div class="w-full">
-        <img class="rounded-b-2xl w-full" src="assets/images/illustration-sign-up-mobile.svg" alt="">
-    </div>
-    <!-- text box -->
-    <div class="flex flex-col ml-5 ">
-        <!-- title -->
-        <span class="font-bold text-4xl my-5">
-            Stay updated!
-        </span >
-        <!-- text under title -->
-        <span class="mb-5 pr-7">
-            Join 60,000+ product managers receiving monthly updates on:
-        </span>
-        <!-- list of benefits -->
-        <div class="flex flex-row pr-7 gap-3">
-            <img src="assets/images/icon-list.svg" alt="">
-            <span>Product discovery and building what matters</span>
-        </div>
+<body class="flex md:justify-center md:items-center w-screen h-screen gap-7 md:bg-gray-300">
 
-        <div class="flex flex-row pr-7 gap-3 my-5">
-            <img src="assets/images/icon-list.svg" alt="">
-            <span>Measuring to ensure updates are a success</span>
-        </div>
+    <div id="wraper" class="flex flex-col w-screen h-screen gap-7 md:h-[70%] md:flex-row-reverse md:w-[60%] md:bg-white md:justify-between md:rounded-3xl">
+        <!-- image box -->
+    <div class="w-full md:w-auto md:h-full md:pr-3 md:pt-3 md:pb-3">
+        <img class="rounded-b-2xl w-full md:hidden" src="assets/images/illustration-sign-up-mobile.svg" alt="">
+        <img class="hidden md:inline md:h-full md:w-full rounded-none" src="assets/images/illustration-sign-up-desktop.svg" alt="">
+    </div>
 
-        <div class="flex flex-row pr-7 gap-3">
-            <img src="assets/images/icon-list.svg" alt="">
-            <span>And much more!</span>
+
+    <!-- text and signup section -->
+    <div id="text-box" class="flex flex-col gap-5 md:gap-0 md:justify-center md:items-center  md:w-auto md:ml-5">
+        <!-- text box -->
+        <div class="flex flex-col ml-5 ">
+            <!-- title -->
+            <span id="title" class="font-bold text-4xl my-5 md:my-[5%]">
+                Stay updated!
+            </span >
+            <!-- text under title -->
+            <span class="mb-[5%] pr-7 text">
+                Join 60,000+ product managers receiving monthly updates on:
+            </span>
+            <!-- list of benefits -->
+            <div class="flex flex-row pr-7 gap-3">
+                <img src="assets/images/icon-list.svg" alt="">
+                <span class="text" >Product discovery and building what matters</span>
+            </div>
+
+            <div class="flex flex-row pr-7 gap-3 my-[2%]">
+                <img src="assets/images/icon-list.svg" alt="">
+                <span class="text" >Measuring to ensure updates are a success</span>
+            </div>
+
+            <div class="flex flex-row pr-7 gap-3">
+                <img src="assets/images/icon-list.svg" alt="">
+                <span class="text" >And much more!</span>
+            </div>
+        </div>
+        <!-- sign-up box -->
+        <div class="flex flex-col ml-6 w-full">
+            <div class="flex justify-between w-[92%] md:mt-[5%]">
+                <span class="text-sm font-bold md:text-xs  text">Email address</span>
+                <span id="email-invalid-text" class="hidden font-bold text-sm md:text-xs text-orange-500 text">Valid email required</span>
+                <span id="success" class="hidden text-green-500 text-sm font-bold text">success</span>
+                <span id="already-done" class="hidden text-yellow-300 text-sm font-bold text">already signed up</span>
+            </div>
+            <input id="input" class=" w-[92%] pl-3 border border-gray-400 rounded-md mb-5 md:mb-[5%] h-[50px] mt-3 md:h-[40px] text"  type="email" placeholder="email@company.com">
+
+            <button id="signup-button" class="text hover:bg-gradient-to-tr from-pink-600 to-orange-600
+            transition-all duration-200 text-sm font-bold w-[92%] h-[50px] md:h-[40px] bg-black text-white rounded-md">Subscribe to monthly newsletter</button>
         </div>
     </div>
-    <!-- sign-up box -->
-    <div class="flex flex-col ml-6">
-        <div class="flex justify-between w-[92%]">
-            <span class="text-sm font-bold">Email address</span>
-            <span id="email-invalid-text" class="hidden font-bold text-sm text-orange-500">Valid email required</span>
-            <span id="success" class="hidden text-green-500 text-sm font-bold">success</span>
-            <span id="already-done" class="hidden text-yellow-300 text-sm font-bold">already signed up</span>
-        </div>
-        <input id="input" class=" w-[92%] pl-3 border border-gray-400 rounded-md mb-5 h-[50px] mt-3"  type="email" placeholder="email@company.com">
-
-        <button id="signup-button" class="hover:bg-gradient-to-tr from-pink-600 to-orange-600
-        transition-all duration-200 text-sm font-bold w-[92%] h-[50px] bg-black text-white rounded-md">Subscribe to monthly newsletter</button>
-    </div>
+    
     <!-- success popup screen -->
     <div id="success-popup" class="flex flex-col items-center justify-between fixed inset-0 bg-white translate-y-full transition-all duration-700" >
         <div class="flex flex-col gap-6 items-center justify-center pt-32 w-[95%]">
@@ -69,7 +78,7 @@
             Dismiss message
         </button>
     </div>
-    
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
